@@ -1,0 +1,233 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Permanent;
+    src: url(police/PermanentMarker-Regular.ttf);
+}
+
+@font-face {
+    font-family: Bangers;
+    src: url(police/Bangers-Regular.ttf);
+}
+
+header {
+    background-color:  #1C4E80;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+    padding-left: 150px;
+}
+
+main {
+    
+}
+
+.logo img {
+    height: 120px;
+    margin-left: 50px;
+}
+
+ul.menu {
+    display: flex;
+    list-style: none;
+    gap: 35px;
+    margin-top: 50px;
+}
+
+ul.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: Permanent;
+}
+
+ul.menu li a:hover {
+    color: #ffdb00;
+
+}
+
+nav .menu-hamburger {
+    display: none;
+}
+
+.btn {
+    margin-top: 60px;
+}
+
+.darkmode-btn {
+    border: solid 3px;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: none;
+    border-radius: 30px;
+}
+
+#content button {
+    border: solid 3px;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: none;
+    border-radius: 30px;
+    margin-top: 40px;
+}
+
+#content button:hover, .darkmode-btn:hover {
+    background-color: #FFD700; 
+    color: #1C4E80;  
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px); 
+}
+
+
+.darkmodecustom {
+    margin-top: 40px;
+}
+
+.photoaccueil {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+  }
+
+.photoaccueil img{
+    width: 100%;
+    height: 600px;
+    opacity: 0;  
+    object-fit: cover;
+    transition: opacity 1s ease-in-out;
+    top: 0;
+    left: 0;
+    position: absolute;
+
+}
+
+.photoaccueil img.active {
+    opacity: 0.3;
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFD700; 
+    text-align: center;
+    background: rgba(28, 78, 128, 0.7);
+    padding: 20px; 
+    border-radius: 10px;
+    opacity: 0;
+    animation: fadeIn 3s ease-in-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+.overlay-text h1 {
+    font-size: 2.5rem; 
+    margin: 0;
+    font-family: Bangers;
+}
+
+/*style page connexion*/
+
+
+#login {
+    background: url(images/wp7826478.png) no-repeat;
+    background-size: cover;
+}
+
+
+#container {
+    background-color: rgba(28, 78, 128, 0.7);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+}
+
+
+#container img {
+    height: auto;
+    width: 45%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+
+.log h2 {
+    font-family: 'Permanent Marker', cursive;
+    color:#FFD700;
+    font-size: 36px;
+    margin-bottom: 25px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+#login-form, #register-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+
+#login-form input, #register-form input {
+    height: 40px;
+    width: 100%;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 1px solid #FFA500;
+    border-radius: 5px;
+    background-color: #FFF8DC;
+    color: #333;
+    transition: border-color 0.3s ease;
+}
+
+#login-form input:focus, #register-form input:focus {
+    border-color: #1C4E80;
+    outline: none;
+}
+
+#login-form button, #register-form button {
+    height: 45px;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: #FFD700;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
