@@ -1,12 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Profil DBZ</title>
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
 </head>
-<body>
-    
+<body class="profil-page">
+    <header>
+        <nav>
+            <div class="nav-links">
+                <ul class="menu">
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </div>
+            <div class="logo">
+                <img src="images/IMG_1877-removebg-preview.png" alt="Logo du site">
+            </div>
+            <div class="darkmodecustom">
+                <div class="dark-mode">
+                    <button class="darkmode-btn" onclick="toggleDarkMode()">Dark Mode</button>
+                </div>
+            </div>
+            <div id="content">
+                <button id="logout-button">Se déconnecter</button>
+            </div>
+            <div class="hamburger">
+                <img src="image/menu-btn.webp" alt="">
+            </div>
+        </nav>
+    </header>
+
+    <main class="profil-container">
+        <section class="user-info-section">
+            <div class="user-avatar">
+                <img src="images/187711.png" alt="Avatar" id="user-avatar-img">
+            </div>
+            <div class="user-details">
+                <h1 id="username">Nom Utilisateur</h1>
+                <div class="user-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="total-cards">0</span>
+                        <span class="stat-label">Cartes</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="unique-cards">0</span>
+                        <span class="stat-label">Uniques</span>
+                    </div>
+                </div>
+                <div class="user-meta">
+                    <p><i class="fas fa-envelope"></i> <span id="user-email">email@exemple.com</span></p>
+                    <p><i class="fas fa-calendar-alt"></i> Membre depuis <span id="join-date">01/01/2023</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="collection-section">
+            <h2><i class="fas fa-book"></i> Ma Collection</h2>
+            <div class="collection-filters">
+                <input type="text" id="collection-search" placeholder="Rechercher dans ma collection...">
+                <select id="collection-sort">
+                    <option value="recent">Récentes</option>
+                    <option value="power">Puissance</option>
+                    <option value="name">Nom (A-Z)</option>
+                </select>
+            </div>
+            <div class="collection-grid" id="collection-grid">
+                
+            </div>
+        </section>
+    </main>
+    <footer class="dbz-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="images/IMG_1877-removebg-preview.png" alt="DBZ Cards Logo">
+                <p>La référence des collectionneurs de cartes Dragon Ball</p>
+            </div>
+            
+            <div class="footer-links">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="collection.html">Collection</a></li>
+                    <li><a href="profil.html">Profil</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>Contactez-nous</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> contact@dbzcards.com</li>
+                    <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 12 Rue des Saïyans, 75000 Paris</li>
+                </ul>
+            </div>
+            
+            <div class="footer-social">
+                <h3>Nos réseaux</h3>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-discord"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2023 DBZ Cards Collection. Tous droits réservés.</p>
+            <a href="#">Mentions légales</a> | 
+            <a href="#">Politique de confidentialité</a> | 
+            <a href="#">Conditions d'utilisation</a>
+        </div>
+    </footer>
+
 </body>
 </html>

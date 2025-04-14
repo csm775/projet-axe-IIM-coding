@@ -32,4 +32,4 @@ async function displaySpecificCharacters(names) {
 }
 
 // Liste des noms de personnages à afficher
-displaySpecificCharacters(["Piccolo", "Vegeta", "Gohan"]);
+displaySpecificCharacters(["Piccolo", "Vegeta", "Gohan" , "Goku"]);
