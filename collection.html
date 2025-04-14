@@ -32,5 +32,32 @@
             </div>
         </nav>
     </header>
+    <main>
+        <section id="cartes">
+            <input type="text" id="barre-recherche" value="" placeholder="Recherche" data-search="">
+            <ul id="filtres">
+                <li data-filter="all" class="active">All</li>
+                <li data-filter="Z Fighter">Z Fighter</li>
+                <li data-filter="Army of Frieza">Army of Frieza</li>
+                <li data-filter="Freelancer">Freelancer</li>
+                <li data-filter="Other">Other</li>
+                <li data-filter="Villain">Villain</li>
+                <li data-filter="Pride Troopers">Pride Troopers</li>
+            </ul>
+            <div class="filtres-container">
+                <div id="characters-collection"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <ul>
+            <li><a href="">Contactez nous</a></li>
+            <li><a href="">Nos réseaux</a></li>
+            <li><a href="">FAQ</a></li>
+        </ul>
+    </footer>
+    
+    <script src="apicollection.js"></script>
+    <script src="recherche.js"></script>
 </body>
 </html>

@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
         emailField.value = storedEmail;
     }
 
-    // événement déclancher à l'appui du  bouton
+    
     loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
         let email = emailField.value;
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         login(email, password);
     });
 
-    // option d'inscription
+    
     registerForm.addEventListener('submit', function (e) {
         e.preventDefault();
         let email = document.getElementById('register-email').value;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// déconnexion et redirection vers la page html login
+
 document.getElementById('logout-button').addEventListener('click', function () {
     deconexion();
     window.location.href = 'login.html';
