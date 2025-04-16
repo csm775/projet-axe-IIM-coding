@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Document</title>
 </head>
 <body>
+    <!-- Début du header -->
     <header>
         <nav>
             <div class="nav-links">
@@ -28,11 +30,12 @@
                 <button id="logout-button">Se déconnecter</button>
             </div>
             <div class="hamburger">
-                <img src="image/menu-btn.webp" alt="">
+                <img src="images/Hamburger_icon.svg.png" alt="">
             </div>
         </nav>
     </header>
     <main>
+        <!-- collection de cartes -->
         <section id="cartes">
             <input type="text" id="barre-recherche" value="" placeholder="Recherche" data-search="">
             <ul id="filtres">
@@ -49,6 +52,7 @@
             </div>
         </section>
     </main>
+    <!-- Début du footer -->
     <footer class="dbz-footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -95,5 +99,6 @@
     
     <script src="apicollection.js"></script>
     <script src="recherche.js"></script>
+    <script src="sidebar.js"></script>
 </body>
 </html>
