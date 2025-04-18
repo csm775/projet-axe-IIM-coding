@@ -8,6 +8,7 @@
     <script src="banniere.js"></script>
     <title>DBZ Cards</title>
 </head>
+
 <body>
     <!-- Début du header -->
     <header>
@@ -108,10 +109,43 @@
             <a href="#">Conditions d'utilisation</a>
         </div>
     </footer>
+    <!-- Bouton flottant -->
+<button class="float-btn" id="float-btn">
+    <i class="fas fa-exchange-alt"></i>
+</button>
+
+<!-- Modal d'échange -->
+<div class="exchange-modal" id="exchange-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Échange de Cartes</h2>
+        
+        <form id="exchange-form">
+            <div class="form-group">
+                <label for="receiver">Joueur :</label>
+                <select id="receiver" required>
+                    <option value="">Choisir un joueur...</option>
+                    <option value="user1"></option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="card-to-give">Carte à échanger :</label>
+                <select id="card-to-give" required>
+                    <option value="">Choisir une carte...</option>
+                    <option value="card1"></option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Proposer l'échange</button>
+        </form>
+    </div>
+</div>
 <script src="banniere.js"></script>
 <script src="auth.js"></script>
 <script src="slide.js"></script>
 <script src="api.js"></script>
 <script src="sidebar.js"></script>
+<script src="float.js"></script>
 </body>
 </html>

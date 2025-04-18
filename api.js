@@ -15,7 +15,7 @@ async function displaySpecificCharacters(names) {
     // Affichage de chaque personnage sélectionné
     selectedCharacters.forEach(character => {
         // Vérifie la structure des données du personnage
-        console.log(character); // <-- Inspectez la console pour voir les propriétés
+        console.log(character); 
 
         document.getElementById("characters").innerHTML += `
             <div class="character-carte">

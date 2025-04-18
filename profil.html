@@ -47,10 +47,6 @@
                         <span class="stat-value" id="total-cards">0</span>
                         <span class="stat-label">Cartes</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-value" id="unique-cards">0</span>
-                        <span class="stat-label">Uniques</span>
-                    </div>
                 </div>
                 <div class="user-meta">
                     <p><i class="fas fa-envelope"></i> <span id="user-email">email@exemple.com</span></p>
@@ -74,6 +70,7 @@
             </div>
         </section>
     </main>
+    <!-- Début du footer -->
     <footer class="dbz-footer">
         <div class="footer-content">
             <div class="footer-logo">
@@ -117,6 +114,41 @@
             <a href="#">Conditions d'utilisation</a>
         </div>
     </footer>
+
+        <!-- Bouton flottant -->
+<button class="float-btn" id="float-btn">
+    <i class="fas fa-exchange-alt"></i>
+</button>
+
+<!-- Modal d'échange -->
+<div class="exchange-modal" id="exchange-modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2>Échange de Cartes</h2>
+        
+        <form id="exchange-form">
+            <div class="form-group">
+                <label for="receiver">Joueur :</label>
+                <select id="receiver" required>
+                    <option value="">Choisir un joueur...</option>
+                    <option value="user1"></option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="card-to-give">Carte à échanger :</label>
+                <select id="card-to-give" required>
+                    <option value="">Choisir une carte...</option>
+                    <option value="card1"></option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Proposer l'échange</button>
+        </form>
+    </div>
+</div>
     <script src="sidebar.js"></script>
+    <script src="float.js"></script>
+    <script src="auth.js"></script>
 </body>
 </html>

@@ -33,35 +33,39 @@ function deconexion() {
 
 
 document.addEventListener('DOMContentLoaded', function () {
+      // Récupération des éléments du formulaire
     let loginForm = document.getElementById('login-form');
     let registerForm = document.getElementById('register-form');
     let emailField = document.getElementById('login-email');
     let storedEmail = localStorage.getItem('lastEmail');
-
+    // Si un email est trouvé dans le stockage local, on le pré-remplit dans le champ email
     if (storedEmail) {
         emailField.value = storedEmail;
     }
 
-    
+     // Gestion de la soumission du formulaire de connexion
     loginForm.addEventListener('submit', function (e) {
         e.preventDefault();
         let email = emailField.value;
         let password = document.getElementById('login-password').value;
+        // Appel de la fonction de connexion avec les identifiants
         login(email, password);
     });
 
     
+    // Gestion de la soumission du formulaire d'inscription
     registerForm.addEventListener('submit', function (e) {
         e.preventDefault();
         let email = document.getElementById('register-email').value;
         let password = document.getElementById('register-password').value;
+         // Appel de la fonction d'enregistrement
         utilisateur(email, password);
         alert('Inscription réussie');
     });
 
 });
 
-
+// Gestion du bouton de déconnexion
 document.getElementById('logout-button').addEventListener('click', function () {
     deconexion();
     window.location.href = 'login.html';
