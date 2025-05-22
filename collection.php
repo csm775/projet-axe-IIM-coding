@@ -108,7 +108,6 @@ session_start();
     <i class="fas fa-exchange-alt"></i>
 </button>
 
-<!-- Modal d'échange -->
 <div class="exchange-modal" id="exchange-modal">
     <div class="modal-content">
         <span class="close-modal">&times;</span>
@@ -119,8 +118,8 @@ session_start();
                 <label for="receiver">Joueur :</label>
                 <select id="receiver" required>
                     <option value="">Choisir un joueur...</option>
-                    <option value="user1">Son Goku</option>
-                    <option value="user2">Vegeta</option>
+                    <option value="user1">Joueur 1</option>
+                     <option value="user2">Joueur 2</option>
                 </select>
             </div>
             
@@ -128,7 +127,10 @@ session_start();
                 <label for="card-to-give">Carte à échanger :</label>
                 <select id="card-to-give" required>
                     <option value="">Choisir une carte...</option>
-                    <option value="card1"></option>
+                    <option value="card1">Vegeta</option>
+                    <option value="card2">Goku</option>
+                    <option value="card1">Gohan</option>
+                    <option value="card1">Piccolo</option>
                 </select>
             </div>
             
