@@ -10,6 +10,12 @@
 }
 
 @font-face {
+    font-family: Sayan;
+    src: url(police/Saiyan-Sans.ttf);
+}
+
+
+@font-face {
     font-family: Bangers;
     src: url(police/Bangers-Regular.ttf);
 }
@@ -39,7 +45,7 @@ body {
 /*header*/
 
 header {
-    background-color:  #00BFFF;
+    background-color:  white;
 }
 
 nav {
@@ -66,7 +72,7 @@ ul.menu {
 }
 
 ul.menu li a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 30px;
     font-family: Permanent;
@@ -169,54 +175,70 @@ nav .menu-hamburger {
     font-family: Bangers;
 }
 
-/* login.css */
+/*style page connexion*/
 
-/* Style général pour toute la page login */
-#login-page {
-    font-family: Arial, sans-serif;
-    background: url(images/wp7826478.png) no-repeat center center fixed;
+
+#login {
+    background: url(images/wp7826478.png) no-repeat;
     background-size: cover;
-    background-color: rgba(28, 78, 128, 0.7);
-    padding: 0;
-    margin: 0;
-    height: 100vh; /* Pour couvrir toute la hauteur de la page */
 }
 
-/* Style pour le conteneur du formulaire */
-#login-page #login-container {
-    background: rgba(28, 78, 128, 0.7);  /* Couleur de fond semi-transparente */
-    padding: 40px 30px;
-    max-width: 600px;
-    margin: 100px auto;
+
+#container {
+    background-color: rgba(28, 78, 128, 0.7);
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    margin: 0 auto;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    max-width: 800px;
+    margin-top: 100px;
+}
+
+
+#container img {
+    height: auto;
+    width: 45%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+.log {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    color: #FFFFFF;
     text-align: center;
 }
 
-/* Style du logo */
-#login-page #logo-container img {
-    width: 50%;
-    height: auto;
-    margin-bottom: 30px;
+
+.log h2 {
+    font-family: 'Permanent Marker', cursive;
+    color:#FFD700;
+    font-size: 36px;
+    margin-bottom: 25px;
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
-/* Style du titre */
-#login-page h1 {
-    font-size: 2.5em;
-    color: #fff;
-    margin-bottom: 20px;
-}
 
-/* Formulaire de connexion */
-#login-page form {
+#login-form, #register-form {
     display: flex;
     flex-direction: column;
+    width: 100%;
     gap: 15px;
 }
 
-#login-page form input {
+
+#login-form input, #register-form input {
     height: 40px;
-    padding: 10px;
+    width: 100%;
+    padding: 0 15px;
     font-size: 16px;
     border: 1px solid #FFA500;
     border-radius: 5px;
@@ -225,36 +247,22 @@ nav .menu-hamburger {
     transition: border-color 0.3s ease;
 }
 
-#login-page form input:focus {
+#login-form input:focus, #register-form input:focus {
     border-color: #1C4E80;
     outline: none;
 }
 
-#login-page form input[type="submit"] {
+#login-form button, #register-form button {
+    height: 45px;
+    font-size: 16px;
+    color: #FFFFFF;
     background-color: #FFD700;
-    color: #fff;
-    cursor: pointer;
-}
-
-#login-page form input[type="submit"]:hover {
-    background-color: #1C4E80;
-}
-
-/* Lien de déconnexion */
-#login-page a {
-    color: #fff;
-    text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
-    background-color: #FF6347;
-    padding: 10px 20px;
+    border: none;
     border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-
-#login-page a:hover {
-    background-color: #1C4E80;
-}
-
 
 /*section cartes boosters*/
 
@@ -345,6 +353,7 @@ ul#filtres{
     transform: translateY(-3px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     color: #fff;
+    font-family: Permanent;
 }
 
 .collection-btn:active {
@@ -468,7 +477,6 @@ ul#filtres{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
 .character-link {
@@ -477,70 +485,34 @@ ul#filtres{
     display: block;
 }
 
-#det{
-    background-color: #00BFFF;
-}
-
-.carte-detail {
-    border: 5px solid #FF4500;      
-    background-color: #d68411;          
-    padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(255, 69, 0, 0.3); 
-    max-width: 400px;
-    margin: 40px auto;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.carte-detail img {
-    height: 300px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.carte-detail h2 {
-    color: black;
-    margin-bottom: 15px;
-}
-
-.carte-detail p {
-    font-weight: 600;
-    margin: 6px 0;
-    color: white;
-}
-
 
 .favorite-btn {
-  position: absolute;       
-  top: 10px;                
-  right: 10px;              
-  background: transparent;  
-  border: none;             
-  cursor: pointer;          
-  outline: none;            
-  z-index: 10;              
-  transition: transform 0.2s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: grey;
+    z-index: 1000;
+}
+
+.favorite-btn.active i {
+    color: red;
 }
 
 .favorite-btn i {
-  font-size: 24px;          
-  color: #888;              
-  transition: color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.favorite-btn.active i,
-.favorite-btn:hover i {
-  color: #e74c3c;           
-  transform: scale(1.2);    
-}
+
 
 .character-carte img {
     max-height: 200px;
     object-fit: cover;
     border-radius: 10px;
+     pointer-events: none;
 }
 
 .character-carte h2,
@@ -548,6 +520,7 @@ ul#filtres{
     color: #333333;
     margin: 2px 0;
     font-size: 15px;
+    font-family: Sayan;
 }
 
 
@@ -642,46 +615,10 @@ ul#filtres{
 }
 
 .collection-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* espace entre cartes */
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .card {
-    border: 5px solid #FFD700;
-    background-color: #FAF3E0;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 15%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease;
-  }
-  
-  .card img {
-    height: 100px;
-    object-fit: cover;
-    border-radius: 10px;
-    width: 100%;
-  }
-  
-  .card h3 {
-    margin: 10px 0 5px;
-    font-size: 1.1rem;
-    color: #333;
-  }
-  
-  .card p {
-    margin: 2px 0;
-    font-size: 0.95rem;
-    color: #555;
-  }
-  
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
 
 .collection-card {
     background: #FAF3E0;
@@ -799,6 +736,51 @@ ul#filtres{
     color: #FFD700;
     width: 20px;
     text-align: center;
+}
+
+.collection-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card {
+    border: 5px solid #FFD700;
+    background-color: #FAF3E0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 220px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.card p {
+    margin: 2px 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.card:hover {
+    transform: scale(1.05);
 }
 
 
@@ -968,6 +950,7 @@ body {
   border: 3px solid #FFD700;
   box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
   position: relative; 
+  margin: 0; 
   animation: modal 0.3s ease-out forwards;
 }
 

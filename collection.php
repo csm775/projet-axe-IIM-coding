@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,9 +16,9 @@
         <nav>
             <div class="nav-links">
                 <ul class="menu">
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="collection.html">Collection</a></li>
-                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="accueil.php">Accueil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="profil.php">Profil</a></li>
                 </ul>
             </div>
             <div class="logo">
@@ -27,8 +30,11 @@
                 </div>
             </div>
             <div id="content">
-                <button id="logout-button">Se déconnecter</button>
-            </div>
+            <?php if (isset($_SESSION["email"])) { ?>
+                <a href="login.php?action=deconnexion"><button>Se déconnecter</button></a>
+            <?php } else { ?>
+             <a href="inscription.php"><button>Se connecter / S'inscrire</button></a>
+            <?php } ?>
             <div class="hamburger">
                 <img src="images/Hamburger_icon.svg.png" alt="">
             </div>
@@ -63,9 +69,9 @@
             <div class="footer-links">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="collection.html">Collection</a></li>
-                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="accueil.php">Accueil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="profil.php">Profil</a></li>
                 </ul>
             </div>
             
@@ -130,11 +136,12 @@
         </form>
     </div>
 </div>
-    
-    <script src="apicollection.js"></script>
     <script src="recherche.js"></script>
+    <script src="apicollection.js"></script>
     <script src="sidebar.js"></script>
     <script src="float.js"></script>
     <script src="auth.js"></script>
+    <script src="favoris.js"></script>
+
 </body>
 </html>

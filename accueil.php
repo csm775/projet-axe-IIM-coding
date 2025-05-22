@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
     <script src="banniere.js"></script>
     <title>DBZ Cards</title>
 </head>
@@ -15,9 +20,9 @@
         <nav>
             <div class="nav-links">
                 <ul class="menu">
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="collection.html">Collection</a></li>
-                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="accueil.php">Accueil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="profil.php">Profil</a></li>
                 </ul>
             </div>
             <div class="logo">
@@ -29,8 +34,14 @@
                 </div>
             </div>
             <div id="content">
-                <button id="logout-button">Se déconnecter</button>
+            <?php if (isset($_SESSION["email"])) { ?>
+                <a href="login.php?action=deconnexion"><button>Se déconnecter</button></a>
+            <?php } else { ?>
+             <a href="inscription.php"><button>Se connecter / S'inscrire</button></a>
+            <?php } ?>
             </div>
+
+
             <div class="hamburger">
                 <img src="images/Hamburger_icon.svg.png" alt="">
             </div>
@@ -54,7 +65,7 @@
                 <h2>Les cartes du moment !</h2>
                  <div id="characters"></div>
                  <div class="see-collection">
-                    <a href="collection.html" class="collection-btn">Voir toute la collection</a>
+                    <a href="collection.php" class="collection-btn">Voir toute la collection</a>
                 </div>
             </div>
             <!-- booster -->
@@ -63,6 +74,7 @@
                 <img src="images/IMG_2007.jpeg" alt="Booster DBZ">
                 <input type="button" value="Deballer" id="deballer">
             </div>
+
         </section>
     </main>
     <!-- Début du footer -->
@@ -76,9 +88,9 @@
             <div class="footer-links">
                 <h3>Navigation</h3>
                 <ul>
-                    <li><a href="accueil.html">Accueil</a></li>
-                    <li><a href="collection.html">Collection</a></li>
-                    <li><a href="profil.html">Profil</a></li>
+                    <li><a href="accueil.php">Accueil</a></li>
+                    <li><a href="collection.php">Collection</a></li>
+                    <li><a href="profil.php">Profil</a></li>
                 </ul>
             </div>
             
@@ -125,7 +137,8 @@
                 <label for="receiver">Joueur :</label>
                 <select id="receiver" required>
                     <option value="">Choisir un joueur...</option>
-                    <option value="user1"></option>
+                    <option value="user1">Joueur 1</option>
+                     <option value="user2">Joueur 2</option>
                 </select>
             </div>
             
@@ -133,7 +146,10 @@
                 <label for="card-to-give">Carte à échanger :</label>
                 <select id="card-to-give" required>
                     <option value="">Choisir une carte...</option>
-                    <option value="card1"></option>
+                    <option value="card1">Vegeta</option>
+                    <option value="card2">Goku</option>
+                    <option value="card1">Gohan</option>
+                    <option value="card1">Piccolo</option>
                 </select>
             </div>
             
@@ -142,10 +158,10 @@
     </div>
 </div>
 <script src="banniere.js"></script>
-<script src="auth.js"></script>
 <script src="slide.js"></script>
 <script src="api.js"></script>
 <script src="sidebar.js"></script>
 <script src="float.js"></script>
+<script src="booster.js"></script>
 </body>
 </html>
